@@ -68,6 +68,7 @@ public class CartController {
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.removeItem(item.get()));
+		System.out.println(cart);
 		cartRepository.save(cart);
 		return ResponseEntity.ok(cart);
 	}

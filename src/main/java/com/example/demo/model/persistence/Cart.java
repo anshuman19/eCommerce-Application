@@ -85,10 +85,12 @@ public class Cart {
 	}
 	
 	public void removeItem(Item item) {
+		System.out.println(item);
 		if(items == null) {
 			items = new ArrayList<>();
 		}
 		items.remove(item);
+		System.out.println(total);
 		if(total == null) {
 			total = new BigDecimal(0);
 		}

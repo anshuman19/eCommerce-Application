@@ -75,10 +75,12 @@ public class UserOrder {
 	}
 
 	public static UserOrder createFromCart(Cart cart) {
+		System.out.println(cart);
 		UserOrder order = new UserOrder();
 		order.setItems(cart.getItems().stream().collect(Collectors.toList()));
 		order.setTotal(cart.getTotal());
 		order.setUser(cart.getUser());
+		System.out.println(order);
 		return order;
 	}
 	
